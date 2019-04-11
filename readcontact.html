@@ -123,16 +123,18 @@
                 var ce = dbo.con_email;
                 var cm = dbo.con_fb;
 
-                var tb = document.createElement("tr");
+                if ((cn != '')&&(ce != '')&&(cm != '')) {
+                    var tb = document.createElement("tr");
 
-                tb.innerHTML =
-                    '<tr>\n' +
-                    '<td>' + cn + '</td>\n' +
-                    '<td>' + ce + '</td>\n' +
-                    '<td>' + cm + '</td>\n' +
-                    '</tr>\n';
+                    tb.innerHTML =
+                        '<tr>\n' +
+                        '<td>' + cn + '</td>\n' +
+                        '<td>' + ce + '</td>\n' +
+                        '<td>' + cm + '</td>\n' +
+                        '</tr>\n';
 
-                document.getElementById("conlist").appendChild(tb);
+                    document.getElementById("conlist").appendChild(tb);
+                }
             });
         });
     }
