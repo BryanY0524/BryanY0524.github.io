@@ -49,7 +49,16 @@
                 }
             });
         }
-        setTimeout(adminuser,2000)
+        setTimeout(adminuser,1800);
+
+        function signOut(){
+            firebase.auth().signOut().then(function() {
+                alert("Signed out!");
+                window.location.href = './index.html';
+            }).catch(function(error) {
+                // An error happened.
+            });
+        }
     </script>
 </head>
 <body>
