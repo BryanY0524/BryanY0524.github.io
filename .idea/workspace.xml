@@ -46,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+            <state relative-caret-position="782">
+              <caret line="67" column="33" lean-forward="true" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -156,7 +156,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="387" />
     <option name="y" value="35" />
     <option name="width" value="1400" />
@@ -207,7 +207,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.aboutme.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="aboutme.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/BryanY0524.github.io/aboutme.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -225,8 +225,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.aboutme.html" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.aboutme.html" />
         <item itemvalue="JavaScript Debug.readcontact.html (1)" />
         <item itemvalue="JavaScript Debug.projects.html" />
         <item itemvalue="JavaScript Debug.update.html" />
@@ -249,18 +249,18 @@
       <workItem from="1554913616367" duration="8391000" />
       <workItem from="1554953579947" duration="16096000" />
       <workItem from="1554970128502" duration="265000" />
-      <workItem from="1554970651627" duration="1692000" />
+      <workItem from="1554970651627" duration="1953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66678000" />
+    <option name="totallyTimeSpent" value="66939000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="387" y="35" width="1400" height="929" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2767988" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19863014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -410,8 +410,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+        <state relative-caret-position="782">
+          <caret line="67" column="33" lean-forward="true" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
         </state>
       </provider>
     </entry>
