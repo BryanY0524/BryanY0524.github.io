@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bryan Yuen Personal Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCkW5kLw1F-WwodPwQTbNGwf77hLHhx30w",
+            authDomain: "bryan-profile.firebaseapp.com",
+            databaseURL: "https://bryan-profile.firebaseio.com",
+            projectId: "bryan-profile",
+            storageBucket: "bryan-profile.appspot.com",
+            messagingSenderId: "3141904489"
+        };
+        firebase.initializeApp(config);
+
+        function signOut(){
+            firebase.auth().signOut().then(function() {
+                alert("Signed out!");
+                window.location.href = './index.html';
+            }).catch(function(error) {
+                // An error happened.
+            });
+        }
+
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href=./index.html>Bryan Yuen</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href=aboutme.html>About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=projects.html>Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=interest.html>Interest</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=recommend.html>Tech Channels</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=message.html>Message Board</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=contact.html>Contact Me</a>
+                </li>
+                <li class="btn btn-primary btn-sm" onclick="signOut()">
+                    <a class="nav-link" href="#">Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<div class = "container justify-content-center col-10 justify-content-center">
+<div class="jumbotron container">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/slide01.jpg" alt="oldPC" style="width:100%;">
+                <div class="carousel-caption">
+                    <h3 class="text-info">My PC Build</h3>
+                    <p class="text-info">8700K@5.0Ghz - ASUS MAXIMUS X CODE - 1080Ti</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/slide02.jpg" alt="PC Build for a friend" style="width:100%;">
+                <div class="carousel-caption">
+                    <h3 class="text-white">PC Build For Friend</h3>
+                    <p class="text-white">8600K@4.9Ghz - MSI Z370 - 1080Ti</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/slide03.jpg" alt="JiuFen Waterfall" style="width:100%;">
+                <div class="carousel-caption">
+                    <h3>Taiwan</h3>
+                    <p>JiuFen Waterfall</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/slide04.jpg" alt="Taipei Liberty Square" style="width:100%;">
+                <div class="carousel-caption">
+                    <h3>Taiwan</h3>
+                    <p>Taipei Liberty Square</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<footer class="page-footer font-small bg-dark fixed-bottom">
+    <div class="footer-copyright text-center text-light py-3">© 2019 Copyright
+        <a href ='admin.html' class="text-light">:</a> Bryan Yuen
+    </div>
+</footer>
+</body>
+</html>

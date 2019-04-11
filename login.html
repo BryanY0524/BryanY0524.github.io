@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bryan Yuen Personal Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "css/login.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCkW5kLw1F-WwodPwQTbNGwf77hLHhx30w",
+            authDomain: "bryan-profile.firebaseapp.com",
+            databaseURL: "https://bryan-profile.firebaseio.com",
+            projectId: "bryan-profile",
+            storageBucket: "bryan-profile.appspot.com",
+            messagingSenderId: "3141904489"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+            <div class="col-md-8 col-lg-6">
+                <div class="login d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-lg-8 mx-auto">
+                                <h3 class="login-heading mb-4">Welcome to Bryan Yuen's Personal Profile</h3>
+                                <form action="#" method="post">
+                                    <div class="form-label-group">
+                                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                        <label for="inputEmail">Email address</label>
+                                    </div>
+
+                                    <div class="form-label-group">
+                                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                        <label for="inputPassword">Password</label>
+                                    </div>
+                                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="button" onclick = signIn()>Sign in</button>
+                                    <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="button" onclick = adduser()>Create Account</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer class="page-footer font-small bg-dark fixed-bottom">
+        <div class="footer-copyright text-center text-light py-3">© 2019 Copyright : Bryan Yuen
+        </div>
+    </footer>
+    <script>
+        function signIn(){
+            alert("Signing In");
+
+            var email = document.getElementById("inputEmail").value;
+            var password = document.getElementById("inputPassword").value;
+            firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+                alert("Error signing in");
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                // ...
+            });
+        }
+        function adduser(){
+            alert("Creating Your Account");
+            var email = document.getElementById("inputEmail").value;
+            var password = document.getElementById("inputPassword").value;
+            firebase.auth().createUserWithEmailAndPassword(email,
+                password).catch(function(error) {
+                // Handle Errors here
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                alert("error"+ error.message);
+                // ...
+            });
+        }
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                // User is signed in.
+                alert("You are Logged In");
+                window.location.href = './message.html';
+            } else {
+                // No user is signed in.
+                // alert("Please Login to use the Message board");
+            }
+        });
+    </script>
+</body>
+</html>

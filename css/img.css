@@ -1,0 +1,14 @@
+.carimg
+{
+    width: 100%;
+    height: 30em;
+    object-fit: contain;
+    overflow: hidden;
+
+}
+
+h3 {
+    color: white;
+    background-color: #343333;
+    font: 20px cookie, cursive;
+}

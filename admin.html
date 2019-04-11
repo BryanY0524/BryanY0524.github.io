@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bryan Yuen Personal Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCkW5kLw1F-WwodPwQTbNGwf77hLHhx30w",
+            authDomain: "bryan-profile.firebaseapp.com",
+            databaseURL: "https://bryan-profile.firebaseio.com",
+            projectId: "bryan-profile",
+            storageBucket: "bryan-profile.appspot.com",
+            messagingSenderId: "3141904489"
+        };
+        firebase.initializeApp(config);
+        var admin_list = [];
+        var db = firebase.firestore();
+        var docRef = db.collection("users");
+        docRef.get().then(snapshot => {snapshot.forEach(doc =>{
+            var dbo = Object.assign({uid: doc.id}, doc.data());
+            var user_mail = dbo.email;
+            admin_list.push(user_mail)
+        })});
+
+        function adminuser() {
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                    // User is signed in.
+                    u_mail = user.email;
+                    console.log(u_mail);
+                    if (admin_list.includes(u_mail)) {
+                        alert("You are Logged In as admin");
+                    } else {
+                        alert("You are not allowed here");
+                        window.location.href = './index.html';
+                    }
+                } else {
+                    // No user is signed in.
+                    alert("You are not logged in");
+                    window.location.href = './login.html';
+                }
+            });
+        }
+        setTimeout(adminuser,1500)
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href=./index.html>Bryan Yuen</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href=aboutme.html>About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=projects.html>Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=interest.html>Interest</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=recommend.html>Tech Channels</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=message.html>Message Board</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=contact.html>Contact Me</a>
+                </li>
+                <li class="btn btn-primary btn-sm" onclick="signOut()">
+                    <a class="nav-link" href="#">Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<div class="container text-center">
+    <a class="btn btn-primary" href="update.html">
+        Update Page
+    </a>
+    <a class="btn btn-primary" href="readcontact.html">
+        Read Feedback
+    </a>
+</div>
+<br>
+<br>
+<footer class="page-footer font-small bg-dark fixed-bottom">
+    <div class="footer-copyright text-center text-light py-3">© 2019 Copyright : Bryan Yuen
+    </div>
+</footer>
+</body>
+</html>
+
