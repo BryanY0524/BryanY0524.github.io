@@ -79,9 +79,16 @@
         </div>
         <div class="form-group">
             <label for="con_feedback">Feedback:</label>
-            <textarea class="form-control" id="con_feedback" name="con_feedback" rows="4" required></textarea>
+            <textarea class="form-control" id="con_feedback" name="con_feedback" rows="4" oninput="badword()" required></textarea>
         </div>
-
+        <label for="reason">Reason Of Contact</label>
+        <select class="custom-select my-1 mr-sm-2" id="reason" name="reason">
+            <option value="gen">General Inquiry</option>
+            <option value="job">Job Opportunities</option>
+            <option value="bug">Reporting bug</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
         <button type="button" class="btn btn-primary" onclick="confeedback()">Submit</button>
     </form>
 </div>
@@ -94,29 +101,48 @@
 </footer>
 <script>
     var db = firebase.firestore();
-    function confeedback(){
+    function confeedback() {
 
         var cn = document.getElementById("con_name").value;
         var ce = document.getElementById("con_email").value;
         var cm = document.getElementById("con_feedback").value;
+        var cy = document.getElementById("reason").value;
 
-        db.collection("contact").add({
-            con_name: cn,
-            con_email: ce,
-            con_fb: cm,
-        })
-            .then(function(docRef) {
-                console.log("Document written with ID: ", docRef.id);
+        if ((cn != '') && (ce != '') && (cm != '') && (cy != '')) {
+            db.collection("contact").add({
+                con_name: cn,
+                con_email: ce,
+                con_fb: cm,
+                con_reason: cy,
             })
-            .catch(function(error) {
-                console.error("Error adding comment: ", error);
-            });
+                .then(function (docRef) {
+                    console.log("Document written with ID: ", docRef.id);
+                })
+                .catch(function (error) {
+                    console.error("Error adding comment: ", error);
+                });
 
-        document.getElementById("con_name").value = "";
-        document.getElementById("con_email").value = "";
-        document.getElementById("con_feedback").value = "";
-        alert("Message Sent")
+            document.getElementById("con_name").value = "";
+            document.getElementById("con_email").value = "";
+            document.getElementById("con_feedback").value = "";
+            document.getElementById("reason").reset();
+            alert("Message Sent")
+        }
+        else{
+            alert("All Inputs are required, please fill in all areas")
+        }
     }
+
+    function badword() {
+        var badwords = ['fuck','shit','gay','bitch'];
+        var words = document.getElementById("con_feedback").value;
+        if (badwords.includes(words.toLowerCase())) {
+            document.getElementById("con_feedback").value ='';
+            alert("Please do not use badwords");
+        }
+    }
+
+
 </script>
 </body>
 </html>

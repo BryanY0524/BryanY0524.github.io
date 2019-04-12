@@ -98,6 +98,7 @@
     <thead>
     <tr>
         <th scope="col">Name</th>
+        <th scope="col">Reason</th>
         <th scope="col">Email</th>
         <th scope="col">Message</th>
     </tr>
@@ -122,6 +123,7 @@
                 var cn = dbo.con_name;
                 var ce = dbo.con_email;
                 var cm = dbo.con_fb;
+                var cy = dbo.con_reason;
 
                 if ((cn != '')&&(ce != '')&&(cm != '')) {
                     var tb = document.createElement("tr");
@@ -129,6 +131,7 @@
                     tb.innerHTML =
                         '<tr>\n' +
                         '<td>' + cn + '</td>\n' +
+                        '<td>' + cy + '</td>\n' +
                         '<td>' + ce + '</td>\n' +
                         '<td>' + cm + '</td>\n' +
                         '</tr>\n';
