@@ -1,0 +1,7 @@
+#ceremony_num{
+    display: inline-block;
+}
+
+#ceremony_names > input{
+    width: 350px;
+}

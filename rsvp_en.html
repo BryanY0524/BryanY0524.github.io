@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kyle&Tiffany RSVP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/indexpage.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mystery+Quest&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo&display=swap" rel="stylesheet">
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyD-k4oUXIQuI2bv4UDoS8hLTLcXn4Ct_Jc",
+            authDomain: "kyletiff-3353d.firebaseapp.com",
+            databaseURL: "https://kyletiff-3353d.firebaseio.com",
+            projectId: "kyletiff-3353d",
+            storageBucket: "kyletiff-3353d.appspot.com",
+            messagingSenderId: "940097046438",
+            appId: "1:940097046438:web:ddd62b8339971b26"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-expand-md" id="topnav">
+    <div class="container border-bottom border-white" id="cus-nav">
+        <a class="navbar-brand" href=./index.html id="brand">Kyle & Tiffany</a>
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./rsvp_ch.html">中文</a>
+                </li>
+                <a class="nav-link rsvpbtn" href="./rsvp_en.html">RSVP</a>
+                <a href="https://api.whatsapp.com/send?phone=85252264460">
+                    <img border="0" alt="whatsapp"
+                         src="./images/whatsapp.png"
+                         style="width:35px;height:35px;margin-left: 10px;"></a>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+<div class="row">
+    <div class="col-lg-6 left-form">
+        <form style="width:100%" id="rsvp">
+            <label for="guest_phone" id="guestphonelabel">Contact Phone Number (Required):</label>
+            <input type="text" class="form-control input-lg" id="guest_phone" placeholder="Phone Number">
+            <label for="guestnum" id="guestnumlabel">Number of Guest(s): </label>
+            <select id="guestnum" class="form-control">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <div class="text-center">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name of Guest (English/Chinese)</th>
+                        <th scope="col">Ceremony</th>
+                        <th scope="col">Banquet</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="guest1">
+                        <th scope="row">1</th>
+                        <td><input class="form-control input-lg" type="text" id="guest1n" placeholder="Name of Guest 1"></td>
+                        <td><input type="checkbox" id="guest1c"></td>
+                        <td><input type="checkbox" id="guest1b"></td>
+                    </tr>
+                    <tr id="guest2" hidden="true">
+                        <th scope="row">2</th>
+                        <td><input class="form-control input-lg" type="text" id="guest2n" placeholder="Name of Guest 2"></td>
+                        <td><input type="checkbox" id="guest2c"></td>
+                        <td><input type="checkbox" id="guest2b"></td>
+                    </tr>
+                    <tr id="guest3" hidden="true">
+                        <th scope="row">3</th>
+                        <td><input class="form-control input-lg" type="text" id="guest3n" placeholder="Name of Guest 3"></td>
+                        <td><input type="checkbox" id="guest3c"></td>
+                        <td><input type="checkbox" id="guest3b"></td>
+                    </tr>
+                    <tr id="guest4" hidden="true">
+                        <th scope="row">4</th>
+                        <td><input class="form-control input-lg" type="text" id="guest4n" placeholder="Name of Guest 4"></td>
+                        <td><input type="checkbox" id="guest4c"></td>
+                        <td><input type="checkbox" id="guest4b"></td>
+                    </tr>
+                    <tr id="guest5" hidden="true">
+                        <th scope="row">5</th>
+                        <td><input class="form-control input-lg" type="text" id="guest5n" placeholder="Name of Guest 5"></td>
+                        <td><input type="checkbox" id="guest5c"></td>
+                        <td><input type="checkbox" id="guest5b"></td>
+                    </tr>
+                    <tr id="guest6" hidden="true">
+                        <th scope="row">6</th>
+                        <td><input class="form-control input-lg" type="text" id="guest6n" placeholder="Name of Guest 6"></td>
+                        <td><input type="checkbox" id="guest6c"></td>
+                        <td><input type="checkbox" id="guest6b"></td>
+                    </tr>
+                    <tr id="guest7" hidden="true">
+                        <th scope="row">7</th>
+                        <td><input class="form-control input-lg" type="text" id="guest7n" placeholder="Name of Guest 7"></td>
+                        <td><input type="checkbox" id="guest7c"></td>
+                        <td><input type="checkbox" id="guest7b"></td>
+                    </tr>
+                    <tr id="guest8" hidden="true">
+                        <th scope="row">8</th>
+                        <td><input class="form-control input-lg" type="text" id="guest8n" placeholder="Name of Guest 8"></td>
+                        <td><input type="checkbox" id="guest8c"></td>
+                        <td><input type="checkbox" id="guest8b"></td>
+                    </tr>
+                    <tr id="guest9" hidden="true">
+                        <th scope="row">9</th>
+                        <td><input class="form-control input-lg" type="text" id="guest9n" placeholder="Name of Guest 9"></td>
+                        <td><input type="checkbox" id="guest9c"></td>
+                        <td><input type="checkbox" id="guest9b"></td>
+                    </tr>
+                    <tr id="guest10" hidden="true">
+                        <th scope="row">10</th>
+                        <td><input class="form-control input-lg" type="text" id="guest10n" placeholder="Name of Guest 10"></td>
+                        <td><input type="checkbox" id="guest10c"></td>
+                        <td><input type="checkbox" id="guest10b"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="cus-sub" onclick="rsvp()">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-6 right-form">
+
+    </div>
+
+</div>
+</div>
+<footer class="footer font-small rsvp-footer">
+    <div class="text-center text-light py-1">© 2019 Copyright : kyle&tiffany
+    </div>
+</footer>
+
+<script src="js/rsvp.js"></script>
+<script>
+    var db = firebase.firestore();
+    function rsvp() {
+        var now = new Date().getTime();
+        var g1n = document.getElementById("guest1n").value;
+        var g1c = document.getElementById("guest1c").checked;
+        var g1b = document.getElementById("guest1b").checked;
+        var g2n = document.getElementById("guest2n").value;
+        var g2c = document.getElementById("guest2c").checked;
+        var g2b = document.getElementById("guest2b").checked;
+        var g3n = document.getElementById("guest3n").value;
+        var g3c = document.getElementById("guest3c").checked;
+        var g3b = document.getElementById("guest3b").checked;
+        var g4n = document.getElementById("guest4n").value;
+        var g4c = document.getElementById("guest4c").checked;
+        var g4b = document.getElementById("guest4b").checked;
+        var g5n = document.getElementById("guest5n").value;
+        var g5c = document.getElementById("guest5c").checked;
+        var g5b = document.getElementById("guest5b").checked;
+        var g6n = document.getElementById("guest6n").value;
+        var g6c = document.getElementById("guest6c").checked;
+        var g6b = document.getElementById("guest6b").checked;
+        var g7n = document.getElementById("guest7n").value;
+        var g7c = document.getElementById("guest7c").checked;
+        var g7b = document.getElementById("guest7b").checked;
+        var g8n = document.getElementById("guest8n").value;
+        var g8c = document.getElementById("guest8c").checked;
+        var g8b = document.getElementById("guest8b").checked;
+        var g9n = document.getElementById("guest9n").value;
+        var g9c = document.getElementById("guest9c").checked;
+        var g9b = document.getElementById("guest9b").checked;
+        var g10n = document.getElementById("guest10n").value;
+        var g10c = document.getElementById("guest10c").checked;
+        var g10b = document.getElementById("guest10b").checked;
+        var gphone = document.getElementById("guest_phone").value;
+
+        if (gphone === ''){
+            alert('Please Enter a Contact Phone Number')
+        }
+        else if (g1n === ''){
+            alert('Please Enter your name')
+        }
+        else {
+            db.collection("attend").add({
+                timestamp: now,
+                guest_phone: gphone,
+                guest01_Name: g1n,
+                guest01_c: g1c,
+                guest01_b: g1b,
+                guest02_Name: g2n,
+                guest02_c: g2c,
+                guest02_b: g2b,
+                guest03_Name: g3n,
+                guest03_c: g3c,
+                guest03_b: g3b,
+                guest04_Name: g4n,
+                guest04_c: g4c,
+                guest04_b: g4b,
+                guest05_Name: g5n,
+                guest05_c: g5c,
+                guest05_b: g5b,
+                guest06_Name: g6n,
+                guest06_c: g6c,
+                guest06_b: g6b,
+                guest07_Name: g7n,
+                guest07_c: g7c,
+                guest07_b: g7b,
+                guest08_Name: g8n,
+                guest08_c: g8c,
+                guest08_b: g8b,
+                guest09_Name: g9n,
+                guest09_c: g9c,
+                guest09_b: g9b,
+                guest10_Name: g10n,
+                guest10_c: g10c,
+                guest10_b: g10b,
+            })
+                .then(function (docRef) {
+                    console.log("Document written with ID: ", docRef.id);
+                })
+                .catch(function (error) {
+                    console.error("Error adding comment: ", error);
+                });
+            alert("RSVP Sent, Thank You for joining us!");
+            document.getElementById("rsvp").reset();
+        }
+    }
+
+
+</script>
+</body>
+
+</html>
