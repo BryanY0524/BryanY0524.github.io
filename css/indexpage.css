@@ -368,10 +368,10 @@ iframe{
         min-height: 450px;
     }
     h3 {
-        font-size: 30px;
+        font-size: 20px;
     }
     #counter {
-        font-size: 28px;
+        font-size: 20px;
         height: 120px;
     }
     #collapsibleNavbar{
@@ -381,6 +381,10 @@ iframe{
         margin-bottom: 0;
         margin-left: 10px;
         margin-right: 10px;
+    }
+    #rsvp{
+        font-family: 'Boogaloo', cursive;
+        font-size: 12px;
     }
 }
 
