@@ -34,129 +34,139 @@
 <body>
 <nav class="navbar navbar-expand-md border-bottom border-white" id="topnav">
 
-        <a class="navbar-brand" href=./index.html id="brand">Kyle & Tiffany</a>
-        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
-                data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./rsvp_ch.html">中文</a>
-                </li>
-                <a class="nav-link rsvpbtn" href="./rsvp_en.html">RSVP</a>
-                <a href="https://api.whatsapp.com/send?phone=85252264460">
-                    <img border="0" alt="whatsapp"
-                         src="./images/whatsapp.png"
-                         style="width:35px;height:35px;margin-left: 10px;"></a>
-            </ul>
-        </div>
+    <a class="navbar-brand" href=./index.html id="brand">Kyle & Tiffany</a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./rsvp_ch.html">中文</a>
+            </li>
+            <a class="nav-link rsvpbtn" href="./rsvp_en.html">RSVP</a>
+            <a href="https://api.whatsapp.com/send?phone=85252264460">
+                <img border="0" alt="whatsapp"
+                     src="./images/whatsapp.png"
+                     style="width:35px;height:35px;margin-left: 10px;"></a>
+        </ul>
+    </div>
 
 </nav>
 <div class="container">
-<div class="row">
-    <div class="col-lg-6 left-form">
-        <form style="width:100%" id="rsvp">
-            <label for="guest_phone" id="guestphonelabel">Contact Phone Number (Required):</label>
-            <input type="text" class="form-control input-lg" id="guest_phone" placeholder="Phone Number">
-            <label for="guestnum" id="guestnumlabel">Number of Guest(s): </label>
-            <select id="guestnum" class="form-control">
-                <option value="1" selected>1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-            <div class="text-center">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name of Guest (English/Chinese)</th>
-                        <th scope="col">Ceremony</th>
-                        <th scope="col">Banquet</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr id="guest1">
-                        <th scope="row">1</th>
-                        <td><input class="form-control input-lg" type="text" id="guest1n" placeholder="Name of Guest 1"></td>
-                        <td><input type="checkbox" id="guest1c"></td>
-                        <td><input type="checkbox" id="guest1b"></td>
-                    </tr>
-                    <tr id="guest2" hidden="true">
-                        <th scope="row">2</th>
-                        <td><input class="form-control input-lg" type="text" id="guest2n" placeholder="Name of Guest 2"></td>
-                        <td><input type="checkbox" id="guest2c"></td>
-                        <td><input type="checkbox" id="guest2b"></td>
-                    </tr>
-                    <tr id="guest3" hidden="true">
-                        <th scope="row">3</th>
-                        <td><input class="form-control input-lg" type="text" id="guest3n" placeholder="Name of Guest 3"></td>
-                        <td><input type="checkbox" id="guest3c"></td>
-                        <td><input type="checkbox" id="guest3b"></td>
-                    </tr>
-                    <tr id="guest4" hidden="true">
-                        <th scope="row">4</th>
-                        <td><input class="form-control input-lg" type="text" id="guest4n" placeholder="Name of Guest 4"></td>
-                        <td><input type="checkbox" id="guest4c"></td>
-                        <td><input type="checkbox" id="guest4b"></td>
-                    </tr>
-                    <tr id="guest5" hidden="true">
-                        <th scope="row">5</th>
-                        <td><input class="form-control input-lg" type="text" id="guest5n" placeholder="Name of Guest 5"></td>
-                        <td><input type="checkbox" id="guest5c"></td>
-                        <td><input type="checkbox" id="guest5b"></td>
-                    </tr>
-                    <tr id="guest6" hidden="true">
-                        <th scope="row">6</th>
-                        <td><input class="form-control input-lg" type="text" id="guest6n" placeholder="Name of Guest 6"></td>
-                        <td><input type="checkbox" id="guest6c"></td>
-                        <td><input type="checkbox" id="guest6b"></td>
-                    </tr>
-                    <tr id="guest7" hidden="true">
-                        <th scope="row">7</th>
-                        <td><input class="form-control input-lg" type="text" id="guest7n" placeholder="Name of Guest 7"></td>
-                        <td><input type="checkbox" id="guest7c"></td>
-                        <td><input type="checkbox" id="guest7b"></td>
-                    </tr>
-                    <tr id="guest8" hidden="true">
-                        <th scope="row">8</th>
-                        <td><input class="form-control input-lg" type="text" id="guest8n" placeholder="Name of Guest 8"></td>
-                        <td><input type="checkbox" id="guest8c"></td>
-                        <td><input type="checkbox" id="guest8b"></td>
-                    </tr>
-                    <tr id="guest9" hidden="true">
-                        <th scope="row">9</th>
-                        <td><input class="form-control input-lg" type="text" id="guest9n" placeholder="Name of Guest 9"></td>
-                        <td><input type="checkbox" id="guest9c"></td>
-                        <td><input type="checkbox" id="guest9b"></td>
-                    </tr>
-                    <tr id="guest10" hidden="true">
-                        <th scope="row">10</th>
-                        <td><input class="form-control input-lg" type="text" id="guest10n" placeholder="Name of Guest 10"></td>
-                        <td><input type="checkbox" id="guest10c"></td>
-                        <td><input type="checkbox" id="guest10b"></td>
-                    </tr>
-                    </tbody>
-                </table>
-                <button type="button" class="cus-sub" onclick="rsvp()">Submit</button>
-            </div>
-        </form>
-    </div>
-    <div class="col-lg-6 right-form">
+    <div class="row">
+        <div class="col-lg-6 left-form">
+            <form style="width:100%" id="rsvp">
+                <label for="guest_phone" id="guestphonelabel">Contact Phone Number (Required):</label>
+                <input type="text" class="form-control input-lg" id="guest_phone" placeholder="Phone Number">
+                <label for="guestnum" id="guestnumlabel">Number of Guest(s): </label>
+                <select id="guestnum" class="form-control">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <div class="text-center">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name of Guest (English/Chinese)</th>
+                            <th scope="col">Ceremony</th>
+                            <th scope="col">Banquet</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr id="guest1">
+                            <th scope="row">1</th>
+                            <td><input class="form-control input-lg" type="text" id="guest1n"
+                                       placeholder="Name of Guest 1"></td>
+                            <td><input type="checkbox" id="guest1c"></td>
+                            <td><input type="checkbox" id="guest1b"></td>
+                        </tr>
+                        <tr id="guest2" hidden="true">
+                            <th scope="row">2</th>
+                            <td><input class="form-control input-lg" type="text" id="guest2n"
+                                       placeholder="Name of Guest 2"></td>
+                            <td><input type="checkbox" id="guest2c"></td>
+                            <td><input type="checkbox" id="guest2b"></td>
+                        </tr>
+                        <tr id="guest3" hidden="true">
+                            <th scope="row">3</th>
+                            <td><input class="form-control input-lg" type="text" id="guest3n"
+                                       placeholder="Name of Guest 3"></td>
+                            <td><input type="checkbox" id="guest3c"></td>
+                            <td><input type="checkbox" id="guest3b"></td>
+                        </tr>
+                        <tr id="guest4" hidden="true">
+                            <th scope="row">4</th>
+                            <td><input class="form-control input-lg" type="text" id="guest4n"
+                                       placeholder="Name of Guest 4"></td>
+                            <td><input type="checkbox" id="guest4c"></td>
+                            <td><input type="checkbox" id="guest4b"></td>
+                        </tr>
+                        <tr id="guest5" hidden="true">
+                            <th scope="row">5</th>
+                            <td><input class="form-control input-lg" type="text" id="guest5n"
+                                       placeholder="Name of Guest 5"></td>
+                            <td><input type="checkbox" id="guest5c"></td>
+                            <td><input type="checkbox" id="guest5b"></td>
+                        </tr>
+                        <tr id="guest6" hidden="true">
+                            <th scope="row">6</th>
+                            <td><input class="form-control input-lg" type="text" id="guest6n"
+                                       placeholder="Name of Guest 6"></td>
+                            <td><input type="checkbox" id="guest6c"></td>
+                            <td><input type="checkbox" id="guest6b"></td>
+                        </tr>
+                        <tr id="guest7" hidden="true">
+                            <th scope="row">7</th>
+                            <td><input class="form-control input-lg" type="text" id="guest7n"
+                                       placeholder="Name of Guest 7"></td>
+                            <td><input type="checkbox" id="guest7c"></td>
+                            <td><input type="checkbox" id="guest7b"></td>
+                        </tr>
+                        <tr id="guest8" hidden="true">
+                            <th scope="row">8</th>
+                            <td><input class="form-control input-lg" type="text" id="guest8n"
+                                       placeholder="Name of Guest 8"></td>
+                            <td><input type="checkbox" id="guest8c"></td>
+                            <td><input type="checkbox" id="guest8b"></td>
+                        </tr>
+                        <tr id="guest9" hidden="true">
+                            <th scope="row">9</th>
+                            <td><input class="form-control input-lg" type="text" id="guest9n"
+                                       placeholder="Name of Guest 9"></td>
+                            <td><input type="checkbox" id="guest9c"></td>
+                            <td><input type="checkbox" id="guest9b"></td>
+                        </tr>
+                        <tr id="guest10" hidden="true">
+                            <th scope="row">10</th>
+                            <td><input class="form-control input-lg" type="text" id="guest10n"
+                                       placeholder="Name of Guest 10"></td>
+                            <td><input type="checkbox" id="guest10c"></td>
+                            <td><input type="checkbox" id="guest10b"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="cus-sub" onclick="rsvp()">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-6 right-form">
+
+        </div>
 
     </div>
-
-</div>
 </div>
 <footer class="footer font-small rsvp-footer">
     <div class="text-center text-light py-1">© 2019 Copyright : kyle&tiffany
@@ -166,6 +176,7 @@
 <script src="js/rsvp.js"></script>
 <script>
     var db = firebase.firestore();
+
     function rsvp() {
         var now = new Date().getTime();
         var g1n = document.getElementById("guest1n").value;
@@ -200,13 +211,11 @@
         var g10b = document.getElementById("guest10b").checked;
         var gphone = document.getElementById("guest_phone").value;
 
-        if (gphone === ''){
+        if (gphone === '') {
             alert('Please Enter a Contact Phone Number')
-        }
-        else if (g1n === ''){
+        } else if (g1n === '') {
             alert('Please Enter your name')
-        }
-        else {
+        } else {
             db.collection("attend").add({
                 timestamp: now,
                 guest_phone: gphone,
