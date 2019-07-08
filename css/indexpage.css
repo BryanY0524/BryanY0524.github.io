@@ -368,10 +368,10 @@ iframe{
         min-height: 450px;
     }
     h3 {
-        font-size: 24px;
+        font-size: 32px;
     }
     #counter {
-        font-size: 24px;
+        font-size: 32px;
         height: 120px;
     }
     #collapsibleNavbar{
