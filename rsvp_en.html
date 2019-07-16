@@ -34,7 +34,7 @@
 <body>
 <nav class="navbar navbar-expand-md border-bottom border-white" id="topnav">
 
-    <a class="navbar-brand" href=./index.html id="brand">Kyle & Tiffany</a>
+    <a class="navbar-brand" href=./index.html id="brand">Tiffany & Kyle</a>
     <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
             data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -44,19 +44,23 @@
             <li class="nav-item">
                 <a class="nav-link" href="./index.html">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./rsvp_ch.html">中文</a>
+            <li class="nav-item nav-icon">
+                <a href="https://api.whatsapp.com/send?phone=85252264460">
+                    <img alt="whatsapp"
+                         src="./images/whatsapp.png"
+                         style="width:30px;height:30px"></a>
             </li>
-            <a class="nav-link rsvpbtn" href="./rsvp_en.html">RSVP</a>
-            <a href="https://api.whatsapp.com/send?phone=85252264460">
-                <img border="0" alt="whatsapp"
-                     src="./images/whatsapp.png"
-                     style="width:35px;height:35px;margin-left: 10px;"></a>
+            <li class="nav-item nav-icon">
+                <a href="./index_ch.html">
+                    <img alt="language"
+                         src="./images/language.png"
+                         style="width:30px;height:30px"></a>
+            </li>
         </ul>
     </div>
 
 </nav>
-<div class="container">
+<div class="container" id="rsvp-main">
     <div class="row">
         <div class="col-lg-6 left-form">
             <form style="width:100%" id="rsvp">
@@ -76,7 +80,7 @@
                     <option value="10">10</option>
                 </select>
                 <div class="text-center">
-                    <table class="table table-striped">
+                    <table class="table table-striped"  style="font-family: 'NotoSans', cursive;">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
