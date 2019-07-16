@@ -416,14 +416,16 @@ iframe{
     }
     .maindate{
         font-size: 4.5vw;
-        text-shadow: 2px 2px #000;
+        text-shadow:
+                1.5px 1.5px #000
     }
     .title {
         font-size: 8vw;
     }
     #counter {
         font-size: 8vw;
-        text-shadow: 2px 2px #000;
+        text-shadow:
+                1px 1px 1px #000
     }
     #collapsibleNavbar{
         background-color: rgb(129, 216, 208);
@@ -440,7 +442,8 @@ iframe{
 
     }
     h3 {
-        text-shadow: 2px 2px #000;
+        text-shadow:
+                1px 1px 1px #000
     }
 }
 
