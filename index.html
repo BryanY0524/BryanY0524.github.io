@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kyle&Tiffany</title>
+    <title>Tiffany & Kyle</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/indexpage.css">
+    <link rel="stylesheet" type="text/css" href="css/timeline.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,8 +19,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg border-bottom border-white" id="topnav">
-
-        <a class="navbar-brand" href=./index.html id="brand">Kyle & Tiffany</a>
+        <a class="navbar-brand" href=./index.html id="brand">Tiffany & Kyle</a>
         <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
                 data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -27,13 +27,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="./index_ch.html">中文</a>
+                    <a href="./index_ch.html">
+                        <img border="0" alt="language"
+                             src="./images/language.png"
+                             style="width:35px;height:35px"></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#events">Events/Map</a>
                 </li>
 
-                <a class="nav-link rsvpbtn" href="./rsvp_en.html">RSVP</a>
+                <a class="nav-link rsvpbtn" href="./rsvp_en.html">&nbspRSVP&nbsp</a>
                 <li class="nav-item">
                     <a class="nav-link" href="#seat">Seating</a>
                 </li>
@@ -43,69 +46,110 @@
                          style="width:35px;height:35px"></a>
             </ul>
         </div>
-
 </nav>
 <img src="./images/top.png" onclick="topFunction()" id="topbtn"/>
 <div id="home" class="d-flex justify-content-center align-items-center">
-    <div class="text-center align-items-center justify-content-center animated fadeInDown">
-        <h3 class="disable-select maindate">November 23, 2019</h3>
+    <div class="text-center align-items-center justify-content-center animated fadeInDown maintext">
+        <h3 class="disable-select maindate">November 23, 2019 • HONG KONG</h3>
         <a class="nav-link rsvpbtn" href="./rsvp_en.html" style="font-size:25px">&nbspRSVP&nbsp</a>
     </div>
 </div>
-<div class="days-coming text-center">
-    <div class="container animated fadeIn" id="countdownmain">
-        <h3 class="title" style="font-family: 'Mystery Quest', cursive;">The Wedding Day</h3>
-        <div id="counter">
-            <div class="d-inline-block"><p id="countdownday"></p>DAY</div>
-            <div class="d-inline-block"><p id="countdownhr"></p>HR</div>
-            <div class="d-inline-block"><p id="countdownmin"></p>MIN</div>
-            <div class="d-inline-block"><p id="countdowns"></p>S</div>
-        </div>
-    </div>
+<div class="container banner">
+WORDS
 </div>
-
 <div>
     <div class="row text-center justify-content-center" id="events">
-        <div class="col-lg-6 d-flex left2 text-center" id="topl">
-            <div class="event_info" data-aos="fade-right">
-                <img src="images/dresscode.png" class="inline_icon" alt="dresscode">
-                <img src="images/wedding.png" class="inline_icon" alt="wedding">
-                <p>Wedding Ceremony<br>
-                    Time: 4:00 PM<br>
-                    St John's Cathedral<br>
-                    4-8 Garden Rd, Central, Hong Kong </p>
+        <div class="col-lg-8 d-flex left2 text-center" id="topl">
+            <div class="container">
+                <h1 class="project-name">WEDDING DAY TIMELINE</h1>
+                <div id="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <img src="images/church.png" class="inline_icon" alt="church">
+                        </div>
+                        <div class="timeline-content">
+                            <h2>Ceremony</h2>
+                            <p>
+                                4:00PM
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.
+                            </p>
+                            <a href="https://goo.gl/maps/7ipzErwgf6UJggzq6" class="btn"><img src="images/location.png" class="map_icon" alt="maplink"></a>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <img src="images/celebrate.png" class="inline_icon" alt="celebrate">
+                        </div>
+                        <div class="timeline-content right">
+                            <h2>Cocktail</h2>
+                            <p>
+                                6:00PM
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo.
+                                Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur
+                                accusantium maxime molestiae sunt ipsa.
+                            </p>
+                            <a href="https://goo.gl/maps/wYtgx9HiguaYeS9R9" class="btn"><img src="images/location.png" class="map_icon" alt="maplink"></a>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <img src="images/photo.png" class="inline_icon" alt="photo">
+                        </div>
+                        <div class="timeline-content">
+                            <h2>Photo</h2>
+                            <p>
+                                6:00PM
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo.
+                                Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur
+                                accusantium maxime molestiae sunt ipsa.<a href="https://goo.gl/maps/wYtgx9HiguaYeS9R9" class="btn"><img src="images/location.png" class="map_icon" alt="maplink"></a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <img src="images/dinner.png" class="inline_icon" alt="dinner" style="padding-top: 7px">
+                        </div>
+                        <div class="timeline-content right">
+                            <h2><img src="images/dinner.png" class="inline_icon" alt="dinner" style="margin-bottom: 8px">Dinner</h2>
+                            <p>
+                                6:00PM
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo.
+                                Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur
+                                accusantium maxime molestiae sunt ipsa.
+                            </p>
+                            <a href="https://goo.gl/maps/wYtgx9HiguaYeS9R9" class="btn"><img src="images/location.png" class="map_icon" alt="maplink"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-6 d-flex right2 text-center" id="topr" data-aos="fade-left">
-            <iframe width="100%" height="500"
-                    src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=4-8%20Garden%20Rd%2C%20Central%2C%20Hong%20Kong+(St%20John's%20Cathedral)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
-                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a
-                    href="https://www.maps.ie/map-my-route/">Create a route on google maps</a></iframe>
+        <div class="col-lg-4 d-flex right2 text-center" id="topr" data-aos="fade-left">
+            <div class="container animated fadeIn" id="countdownmain">
+                <h3 class="title" style="font-family: 'NotoSans', cursive;">The Wedding Day</h3>
+                <div id="counter">
+                    <div class="block"><p id="countdownday"></p></div>
+                    <div class="block"><p id="countdownhr"></p></div>
+                    <div class="block"><p id="countdownmin"></p></div>
+                    <div class="block"><p id="countdowns"></p></div>
+                </div>
+            </div>
         </div>
     </div>
+
 </div>
 
-<div>
-    <div class="row text-center justify-content-center" id="map">
-        <div class="col-lg-6 d-flex left" id="botl">
-            <div class="event_info" data-aos="fade-right">
-                <img src="images/celebrate.png" class="inline_icon" alt="celebrate">
-                <img src="images/dinner.png" class="inline_icon" alt="dinner">
-                <p>Wedding Banquet<br>
-                    Time: 7:00 PM<br>
-                    Kowloon Shangri-La<br>
-                    64 Mody Road, Tsim Sha Tsui East, Kowloon Hong Kong </p>
-            </div>
-        </div>
-        <div class="col-lg-6 d-flex right" id="botr" data-aos="fade-left">
-            <iframe width="100%" height="500"
-                    src="https://maps.google.com/maps?q=%E4%B9%9D%E9%BE%8D%E9%A6%99%E6%A0%BC%E9%87%8C%E6%8B%89%E5%A4%A7%E9%85%92%E5%BA%97&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a
-                    href="https://www.maps.ie/map-my-route/">Create
-                a route on google maps</a></iframe>
-        </div>
-    </div>
-</div>
 
 <iframe src="./images/seat.pdf#zoom=50" id="seat"></iframe>
 
@@ -113,6 +157,7 @@
     <div class="text-center text-light py-1">© 2019 Copyright : kyle&tiffany
     </div>
 </footer>
+<script src="js/timeline.js"></script>
 <script src="js/countdown.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
