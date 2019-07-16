@@ -40,8 +40,11 @@ html, body{
     font-size: 2.5em;
 }
 
+.title{
+    font-size: 3vw;
+}
+
 h3 {
-    font-size: 3rem;
     text-transform: uppercase;
     color: white;
     text-shadow: 3px 3px #000;
@@ -55,6 +58,7 @@ h3 {
 
 .maindate{
     font-family: 'NotoSans', cursive;
+    font-size: 4rem;
 }
 
 #countdownmain{
@@ -89,7 +93,9 @@ padding: 5px;
 .navbar{
     padding-bottom: 5px;
 }
-
+.nav-icon{
+    padding: 5px;
+}
 .navbar-nav>.nav-item, .navbar-nav>a{
     text-align: center;
 }
@@ -224,7 +230,7 @@ input[type=checkbox]
 #counter {
     height: auto;
     font-family: 'NotoSans', cursive;
-    font-size: 5rem;
+    font-size: 5vw;
     width: 100%;
     margin: 0px;
     overflow: hidden;
@@ -356,22 +362,28 @@ iframe{
 
 /* responsive */
 @media(max-width:1600px) {
-    h3 {
+    .title {
         font-size: 3rem;
     }
     #counter {
-        font-size: 4rem;
+        font-size: 5vw;
+    }
+    .maindate{
+        font-size: 4vw;
     }
 }
 @media(max-width:1280px) {
-    h3 {
+    .title {
         font-size: 2.2rem;
+    }
+    .maindate{
+        font-size: 4vw;
     }
     #home{
         min-height: 675px;
     }
     #counter {
-        font-size: 3.1rem;
+        font-size: 5vw;
     }
     #countdownday, #countdownhr, #countdownmin, #countdowns{
         margin-bottom: 0;
@@ -380,14 +392,17 @@ iframe{
     }
 }
 @media(max-width:991px) {
-    h3 {
+    .title {
         font-size: 3rem;
     }
     #home {
         min-height: 550px;
     }
+    .maindate{
+        font-size: 4vw;
+    }
     #counter {
-        font-size: 3rem;
+        font-size: 6vw;
     }
     #countdownday, #countdownhr, #countdownmin, #countdowns{
         margin-bottom: 0;
@@ -399,11 +414,14 @@ iframe{
     #home {
         min-height: 450px;
     }
-    h3 {
+    .maindate{
+        font-size: 4.5vw;
+    }
+    .title {
         font-size: 3rem;
     }
     #counter {
-        font-size: 3rem;
+        font-size: 8vw;
         height: 100%;
     }
     #collapsibleNavbar{
