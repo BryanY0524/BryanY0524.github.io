@@ -314,8 +314,10 @@ input[type=checkbox]
 }
 .inline_icon{
     height: auto;
-    width: 50px;
+    width: 40px;
+    padding-top: 10px;
 }
+
 iframe{
     display: inline-block;
     border: white 2px solid;
