@@ -1,11 +1,11 @@
 @font-face {
     font-family: BaskervilleOldFacSCD;
-    src: url("../font/BaskervilleOldFacSCD.otf") format("opentype");
+    src: url("../font/BaskervilleOldFacSCD.otf");
 }
 
 @font-face {
     font-family: NotoSans;
-    src: url("../font/NotoSansCJK-Thin.ttc") format("truetype");
+    src: url("../font/NotoSansCJK-Thin.ttc");
 }
 
 body{
