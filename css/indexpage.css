@@ -1,12 +1,22 @@
+@font-face {
+    font-family: BaskervilleOldFacSCD;
+    src: url("../font/BaskervilleOldFacSCD.otf") format("opentype");
+}
+
+@font-face {
+    font-family: NotoSans;
+    src: url("../font/NotoSansCJK-Thin.ttc") format("truetype");
+}
+
 body{
-    background: rgb(19, 193, 183);
+    background: rgb(129, 216, 208);
 }
 html, body{
     overflow-x: hidden;
 }
 
 #brand{
-    font-family: 'Great Vibes', cursive;
+    font-family: 'BaskervilleOldFacSCD', cursive;
     font-weight: 400;
     text-transform: none;
     color: white;
@@ -15,12 +25,15 @@ html, body{
 #home{
     background: url(../images/bg2.jpg)no-repeat center;
     background-size: cover;
+    height: 100vh;
     min-height: 750px;
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0;
     display:block;
     vertical-align: middle;
+    position: relative;
+    z-index: 0;
 }
 
 .navbar-brand{
@@ -28,20 +41,29 @@ html, body{
 }
 
 h3 {
-    font-size: 54px;
+    font-size: 3rem;
     text-transform: uppercase;
     color: white;
     text-shadow: 3px 3px #000;
 }
 
+.maintext{
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+}
+
 .maindate{
-    font-family: 'Lemonada', cursive;
+    font-family: 'NotoSans', cursive;
 }
 
 #countdownmain{
     -webkit-animation-duration: 2.5s;
     animation-duration: 2.5s;
+    width: 100%;
+    height: auto;
 }
+
 #home > h3{
     color: white;
     text-shadow: 0 0 1px #000000, 0 0 3px #000000;
@@ -57,6 +79,12 @@ padding: 5px;
 
 #topnav{
     border-bottom-color: white;
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    background: rgb(129, 216, 208);
+    z-index:1; /*Add this*/
 }
 .navbar{
     padding-bottom: 5px;
@@ -110,8 +138,8 @@ padding: 5px;
     margin: 0 8px;
     font-size: 18px;
     text-transform: uppercase;
-    background: rgb(19, 193, 183);
-    border: 2px solid white;
+    background: rgb(129, 216, 208);
+    border: 2px solid black;
     border-radius: 8px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
@@ -119,9 +147,9 @@ padding: 5px;
 }
 
 .rsvpbtn:hover{
-    color: rgb(19, 193, 183);
+    color: rgb(129, 216, 208);
     background: white;
-    border: 2px solid rgb(19, 193, 183);
+    border: 2px solid rgb(129, 216, 208);
 }
 
 .cus-sub {
@@ -132,7 +160,7 @@ padding: 5px;
     margin: 0 8px;
     font-size: 13px;
     text-transform: uppercase;
-    background: rgb(19, 193, 183);
+    background: rgb(129, 216, 208);
     border: 2px solid white;
     border-radius: 8px;
     -webkit-transition-duration: 0.4s;
@@ -152,9 +180,9 @@ padding: 5px;
 }
 
 .cus-sub:hover{
-    color: rgb(19, 193, 183);
+    color: rgb(129, 216, 208);
     background: white;
-    border: 2px solid rgb(19, 193, 183);
+    border: 2px solid rgb(129, 216, 208);
 }
 
 input[type=checkbox]
@@ -177,12 +205,10 @@ input[type=checkbox]
 }
 
 /* NAV CSS */
-.days-coming{
-    background: url(../images/bg1.jpg)no-repeat center;
-    background-size: cover;
-    padding: 20px;
-    display:block;
-    margin-top: -16px;
+
+.banner{
+    width: 100%;
+    height: 25vh;
 }
 
 #about{
@@ -196,20 +222,24 @@ input[type=checkbox]
 }
 
 #counter {
-    height: 200px;
-    font-family: 'Mystery Quest', cursive;
-    font-size: 50px;
+    height: auto;
+    font-family: 'NotoSans', cursive;
+    font-size: 5rem;
     width: 100%;
-    margin: 15px;
-    margin-left: 0px;
+    margin: 0px;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.4);
     text-transform: uppercase;
     color: whitesmoke;
     text-shadow: 3px 3px #000;
     font-weight: 300;
+
 }
 
+.map_icon{
+    height: 30px;
+    width: auto;
+}
 
 .left2{
     display : flex;
@@ -218,9 +248,11 @@ input[type=checkbox]
     height : auto;
     padding:0;
     min-height: 500px;
-    background: url(../images/ceremony.jpg)no-repeat;
+    /*background: url(../images/ceremony.jpg)no-repeat;*/
     background-size: cover;
     background-position: top;
+    z-index: 0;
+    padding-left: 20px;
 }
 
 .right2{
@@ -229,6 +261,7 @@ input[type=checkbox]
     align-items : center;
     height : auto;
     padding:0;
+    margin:0;
     min-height: 500px;
 }
 
@@ -249,14 +282,6 @@ input[type=checkbox]
 
 }
 .right{
-    display : flex;
-    justify-content : center;
-    align-items : center;
-    height : auto;
-    padding:0;
-    min-height: 500px;
-
-
 }
 
 .left-form{
@@ -282,9 +307,8 @@ input[type=checkbox]
     font-weight: 600;
 }
 .inline_icon{
-    height: 80px;
-    width: auto;
-
+    height: auto;
+    width: 50px;
 }
 iframe{
     display: inline-block;
@@ -309,7 +333,7 @@ iframe{
 }
 
 #rsvp{
-    font-family: 'Boogaloo', cursive;
+    font-family: 'NotoSans', cursive;
     font-size: 1em;
 }
 .input-lg{
@@ -331,15 +355,23 @@ iframe{
 
 
 /* responsive */
+@media(max-width:1600px) {
+    h3 {
+        font-size: 3rem;
+    }
+    #counter {
+        font-size: 4rem;
+    }
+}
 @media(max-width:1280px) {
     h3 {
-        font-size: 44px;
+        font-size: 2.2rem;
     }
     #home{
         min-height: 675px;
     }
     #counter {
-        font-size: 50px;
+        font-size: 3.1rem;
     }
     #countdownday, #countdownhr, #countdownmin, #countdowns{
         margin-bottom: 0;
@@ -347,15 +379,15 @@ iframe{
         margin-right: 50px;
     }
 }
-@media(max-width:1050px) {
+@media(max-width:991px) {
     h3 {
-        font-size: 40px;
+        font-size: 3rem;
     }
     #home {
         min-height: 550px;
     }
     #counter {
-        font-size: 44px;
+        font-size: 3rem;
     }
     #countdownday, #countdownhr, #countdownmin, #countdowns{
         margin-bottom: 0;
@@ -368,22 +400,23 @@ iframe{
         min-height: 450px;
     }
     h3 {
-        font-size: 32px;
+        font-size: 3rem;
     }
     #counter {
-        font-size: 32px;
-        height: 120px;
+        font-size: 3rem;
+        height: 100%;
     }
     #collapsibleNavbar{
-        background-color: rgb(19, 193, 183);
+        background-color: rgb(129, 216, 208);
     }
     #countdownday, #countdownhr, #countdownmin, #countdowns{
+        font-size: 8vw;
         margin-bottom: 0;
         margin-left: 10px;
         margin-right: 10px;
     }
     #rsvp{
-        font-family: 'Boogaloo', cursive;
+        font-family: 'NotoSans', cursive;
         font-size: 12px;
     }
 }

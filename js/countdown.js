@@ -16,10 +16,10 @@ var x = setInterval(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Output the result in an element with id="demo"
-    document.getElementById("countdownday").innerHTML = days;
-    document.getElementById("countdownhr").innerHTML = hours;
-    document.getElementById("countdownmin").innerHTML = minutes;
-    document.getElementById("countdowns").innerHTML = seconds;
+    document.getElementById("countdownday").innerHTML = days.toString() + ' DAYS';
+    document.getElementById("countdownhr").innerHTML = hours.toString() + ' HR';
+    document.getElementById("countdownmin").innerHTML = minutes.toString() + ' MIN';
+    document.getElementById("countdowns").innerHTML = seconds.toString()+ ' S';
 
     // If the count down is over, write some text
     if ((distance < 0) && (-(1000*60*60*24)< distance)){
