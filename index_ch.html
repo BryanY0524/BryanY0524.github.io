@@ -6,7 +6,9 @@
     <title>Kyle&Tiffany</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/indexpage.css">
+    <link rel="stylesheet" type="text/css" href="css/timeline.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <link rel="stylesheet" type="text/css" href="css/test.css">
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -19,7 +21,7 @@
 <body>
 <nav class="navbar navbar-expand-lg border-bottom border-white" id="topnav">
 
-        <a class="navbar-brand" href=./index_ch.html id="brand">Kyle & Tiffany</a>
+        <a class="navbar-brand" href=./index_ch.html id="brand">Tiffany & Kyle</a>
         <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
                 data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -27,92 +29,168 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.html">English</a>
+                    <a class="nav-link" href="#events">活動</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#events">活動/地圖</a>
+                    <a class="nav-link" href="#photos">圖片</a>
                 </li>
-                <a class="nav-link rsvpbtn" href="./rsvp_ch.html">RSVP</a>
-                <li class="nav-item">
-                    <a class="nav-link" href="#seat">Seating</a>
+                <a class="nav-link rsvpbtn" href="./rsvp_ch.html">&nbspRSVP&nbsp</a>
+                <li class="nav-item nav-icon">
+                    <a href="https://api.whatsapp.com/send?phone=85252264460">
+                        <img alt="whatsapp"
+                             src="./images/whatsapp.png"
+                             style="width:30px;height:30px"></a>
                 </li>
-                <a href="https://api.whatsapp.com/send?phone=85252264460">
-                    <img border="0" alt="whatsapp"
-                         src="./images/whatsapp.png"
-                         style="width:35px;height:35px"></a>
+                <li class="nav-item nav-icon">
+                    <a href="./index.html">
+                        <img alt="language"
+                             src="./images/language.png"
+                             style="width:30px;height:30px"></a>
+                </li>
             </ul>
         </div>
 
 </nav>
 <img src="./images/top.png" onclick="topFunction()" id="topbtn"/>
 <div id="home" class="d-flex justify-content-center align-items-center">
-    <div class="text-center align-items-center justify-content-center animated fadeInDown">
-        <h3 class="disable-select">2019年 11月 23日</h3>
-        <a class="nav-link rsvpbtn" href="./rsvp_en.html" style="font-size:25px">RSVP</a>
+    <div class="text-center align-items-center justify-content-center animated fadeInDown maintext">
+        <h3 class="disable-select maindate">2019年 11月 23日</h3>
+        <a class="nav-link rsvpbtn" href="./rsvp_ch.html" style="font-size:1.5rem">&nbspRSVP&nbsp</a>
     </div>
 </div>
-<div class="days-coming text-center">
-    <div class="container animated fadeIn" id="countdownmain">
-        <h3 class="title">婚禮日子</h3>
-        <div id="counter">
-            <div class="d-inline-block"><p id="countdownday"></p>日</div>
-            <div class="d-inline-block"><p id="countdownhr"></p>小時</div>
-            <div class="d-inline-block"><p id="countdownmin"></p>分鐘</div>
-            <div class="d-inline-block"><p id="countdowns"></p>秒</div>
-        </div>
-    </div>
+<div class="container banner">
+    WORDS
 </div>
-
 <div>
     <div class="row text-center justify-content-center" id="events">
-        <div class="col-lg-6 d-flex left2 text-center" id="topl">
-            <div class="event_info" data-aos="fade-right">
-                <img src="images/dresscode.png" class="inline_icon" alt="dresscode">
-                <img src="images/wedding.png" class="inline_icon" alt="wedding">
-                <p>婚禮<br>
-                    時間: 下午 4:00<br>
-                    聖約翰座堂<br>
-                    香港中環花園道4-8號 </p>
+        <div class="col-lg-8 d-flex left2 text-center" id="topl">
+            <div class="container">
+                <h1 class="project-name">WEDDING DAY TIMELINE</h1>
+                <div id="timeline">
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon">
+                            <img src="images/church.png" class="inline_icon" alt="church">
+                        </div>
+                        <div class="timeline-content">
+                            <h2>婚禮</h2>
+                            <p>
+                                下午 4:00
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.
+                            </p>
+                            <a href="https://goo.gl/maps/7ipzErwgf6UJggzq6" class="btn"><img src="images/location.png" class="map_icon" alt="maplink"></a>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-icon">
+                            <img src="images/celebrate.png" class="inline_icon" alt="celebrate">
+                        </div>
+                        <div class="timeline-content right">
+                            <h2>Cocktail</h2>
+                            <p>
+                                下午 6:00
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo.
+                                Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur
+                                accusantium maxime molestiae sunt ipsa.
+                            </p>
+                            <a href="https://goo.gl/maps/wYtgx9HiguaYeS9R9" class="btn"><img src="images/location.png" class="map_icon" alt="maplink"></a>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon">
+                            <img src="images/photo.png" class="inline_icon" alt="photo">
+                        </div>
+                        <div class="timeline-content">
+                            <h2>Photo</h2>
+                            <p>
+                                下午 6:00
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo.
+                                Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur
+                                accusantium maxime molestiae sunt ipsa.</a>
+                            </p>
+                            <a href="https://goo.gl/maps/wYtgx9HiguaYeS9R9" class="btn"><img src="images/location.png" class="map_icon" alt="maplink"></a>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-icon">
+                            <img src="images/dinner.png" class="inline_icon" alt="dinner" style="padding-top: 12px">
+                        </div>
+                        <div class="timeline-content right">
+                            <h2>婚宴</h2>
+                            <p>
+                                下午 6:00
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo.
+                                Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur
+                                accusantium maxime molestiae sunt ipsa.
+                            </p>
+                            <a href="https://goo.gl/maps/wYtgx9HiguaYeS9R9" class="btn"><img src="images/location.png" class="map_icon" alt="maplink"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-6 d-flex right2 text-center" id="topr" data-aos="fade-left">
-            <iframe width="100%" height="500"
-                    src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=4-8%20Garden%20Rd%2C%20Central%2C%20Hong%20Kong+(St%20John's%20Cathedral)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
-                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a
-                    href="https://www.maps.ie/map-my-route/">Create a route on google maps</a></iframe>
+        <div class="col-lg-4 d-flex right2 text-center" id="topr">
+            <div class="container animated fadeIn" id="countdownmain" data-aos="fade-left">
+                <h3 class="title" style="font-family: 'NotoSans', cursive;">The Wedding Day</h3>
+                <div id="counter">
+                    <table border = "0" id="cdtable">
+                        <tr>
+                            <td id="countdownday" style="text-align:right;"></td>
+                            <td id="daytext" style="text-align:left;">&nbsp日</td>
+                        </tr>
+                        <tr>
+                            <td id="countdownhr" style="text-align:right;"></td>
+                            <td id="hrtext" style="text-align:left;">&nbsp小時</td>
+                        </tr>
+                        <tr>
+                            <td id="countdownmin" style="text-align:right;"></td>
+                            <td id="mintext" style="text-align:left;">&nbsp分鐘</td>
+                        </tr>
+                        <tr>
+                            <td id="countdowns" style="text-align:right;"></td>
+                            <td id="stext" style="text-align:left;">&nbsp秒</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div>
-    <div class="row text-center justify-content-center" id="map">
-        <div class="col-lg-6 d-flex left" id="botl">
-            <div class="event_info" data-aos="fade-right">
-                <img src="images/celebrate.png" class="inline_icon" alt="celebrate">
-                <img src="images/dinner.png" class="inline_icon" alt="dinner">
-                <p>婚宴<br>
-                    時間: 晚上 7:00<br>
-                    九龍香格里拉大酒店<br>
-                    香港九龍尖沙咀東麼地道64號 </p>
-            </div>
-        </div>
-        <div class="col-lg-6 d-flex right" id="botr" data-aos="fade-left">
-            <iframe width="100%" height="500"
-                    src="https://maps.google.com/maps?q=%E4%B9%9D%E9%BE%8D%E9%A6%99%E6%A0%BC%E9%87%8C%E6%8B%89%E5%A4%A7%E9%85%92%E5%BA%97&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a
-                    href="https://www.maps.ie/map-my-route/">Create
-                a route on google maps</a></iframe>
-        </div>
+<div class="gallery_desktop">
+    <section id="photos">
+        <img src="images/img_h1.jpg" alt="">
+        <img src="images/img_v1.jpg" alt="">
+        <img src="images/img_h2.jpg" alt="">
+        <img src="images/img_v2.jpg" alt="">
+        <img src="images/img_h3.jpg" alt="">
+        <img src="images/img_h4.jpg" alt="">
+        <img src="images/img_h5.jpg" alt="">
+        <img src="images/img_h6.jpg" alt="">
+        <img src="images/img_v3.jpg" alt="">
+        <img src="images/img_h7.jpg" alt="">
+        <img src="images/img_v4.jpg" alt="">
+        <img src="images/img_h7.jpg" alt="">
 
-    </div>
+    </section>
 </div>
-
-<iframe src="./images/seat.pdf#zoom=50" id="seat"></iframe>
-
 <footer class="footer font-small">
-    <div class="text-center text-light py-1">© 2019 Copyright : kyle&tiffany
+    <div class="text-center text-light py-1">© 2019 Copyright : Tiffany&Kyle
     </div>
 </footer>
+<script src="js/timeline.js"></script>
 <script src="js/countdown.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
@@ -137,6 +215,7 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
 </script>
 </body>
 </html>

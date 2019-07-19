@@ -1,5 +1,20 @@
 var countDownDate = new Date("Sat Nov 23, 2019 00:00:00 GMT+08:00").getTime();
 
+function mbStrWidth(input) {
+    let len = 0;
+    for (let i = 0; i < input.length; i++) {
+        let code = input.charCodeAt(i);
+        if ((code >= 0x0020 && code <= 0x1FFF) || (code >= 0xFF61 && code <= 0xFF9F)) {
+            len += 1;
+        } else if ((code >= 0x2000 && code <= 0xFF60) || (code >= 0xFFA0)) {
+            len += 2;
+        } else {
+            len += 0;
+        }
+    }
+    return len;
+}
+
 // Update the count down every 1 second
 var x = setInterval(function() {
 
@@ -16,10 +31,16 @@ var x = setInterval(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Output the result in an element with id="demo"
-    document.getElementById("countdownday").innerHTML = days.toString() + ' DAYS';
-    document.getElementById("countdownhr").innerHTML = hours.toString() + ' HR';
-    document.getElementById("countdownmin").innerHTML = minutes.toString() + ' MIN';
-    document.getElementById("countdowns").innerHTML = seconds.toString()+ ' S';
+    sday = days.toString();
+    shours = hours.toString();
+    smin = minutes.toString();
+    ss = seconds.toString();
+
+
+    document.getElementById("countdownday").innerHTML = sday;
+    document.getElementById("countdownhr").innerHTML = shours;
+    document.getElementById("countdownmin").innerHTML = smin;
+    document.getElementById("countdowns").innerHTML = ss;
 
     // If the count down is over, write some text
     if ((distance < 0) && (-(1000*60*60*24)< distance)){

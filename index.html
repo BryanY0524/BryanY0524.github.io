@@ -31,7 +31,7 @@
                 <a class="nav-link" href="#events">Events</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#gallery">Gallery</a>
+                <a class="nav-link" href="#photos">Gallery</a>
             </li>
             <a class="nav-link rsvpbtn" href="./rsvp_en.html">&nbspRSVP&nbsp</a>
             <li class="nav-item nav-icon">
@@ -66,7 +66,7 @@
             <div class="container">
                 <h1 class="project-name">WEDDING DAY TIMELINE</h1>
                 <div id="timeline">
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-aos="fade-right">
                         <div class="timeline-icon">
                             <img src="images/church.png" class="inline_icon" alt="church">
                         </div>
@@ -83,7 +83,7 @@
                         </div>
                     </div>
 
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-aos="fade-left">
                         <div class="timeline-icon">
                             <img src="images/celebrate.png" class="inline_icon" alt="celebrate">
                         </div>
@@ -101,7 +101,7 @@
                         </div>
                     </div>
 
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-aos="fade-right">
                         <div class="timeline-icon">
                             <img src="images/photo.png" class="inline_icon" alt="photo">
                         </div>
@@ -119,7 +119,7 @@
                         </div>
                     </div>
 
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-aos="fade-left">
                         <div class="timeline-icon">
                             <img src="images/dinner.png" class="inline_icon" alt="dinner" style="padding-top: 12px">
                         </div>
@@ -139,21 +139,36 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 d-flex right2 text-center" id="topr" data-aos="fade-left">
-            <div class="container animated fadeIn" id="countdownmain">
+        <div class="col-lg-4 d-flex right2 text-center" id="topr">
+            <div class="container animated fadeIn" id="countdownmain" data-aos="fade-up">
                 <h3 class="title" style="font-family: 'NotoSans', cursive;">The Wedding Day</h3>
                 <div id="counter">
-                    <div class="block"><p id="countdownday"></p></div>
-                    <div class="block"><p id="countdownhr"></p></div>
-                    <div class="block"><p id="countdownmin"></p></div>
-                    <div class="block"><p id="countdowns"></p></div>
+                    <table border = "0" id="cdtable">
+                        <tr>
+                            <td id="countdownday" style="text-align:right;"></td>
+                            <td id="daytext" style="text-align:left;">&nbspDAY</td>
+                        </tr>
+                        <tr>
+                            <td id="countdownhr" style="text-align:right;"></td>
+                            <td id="hrtext" style="text-align:left;">&nbspHR</td>
+                        </tr>
+                        <tr>
+                            <td id="countdownmin" style="text-align:right;"></td>
+                            <td id="mintext" style="text-align:left;">&nbspMIN</td>
+                        </tr>
+                        <tr>
+                            <td id="countdowns" style="text-align:right;"></td>
+                            <td id="stext" style="text-align:left;">&nbspS</td>
+                        </tr>
+                    </table>
+
                 </div>
             </div>
         </div>
     </div>
 
 </div>
-<div class="gallery_desktop" id="gallery">
+<div class="gallery_desktop">
     <section id="photos">
         <img src="images/img_h1.jpg" alt="">
         <img src="images/img_v1.jpg" alt="">
@@ -199,6 +214,7 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
 </script>
 </body>
 </html>

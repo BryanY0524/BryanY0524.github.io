@@ -140,10 +140,25 @@
             <div class="container animated fadeIn" id="countdownmain">
                 <h3 class="title" style="font-family: 'NotoSans', cursive;">The Wedding Day</h3>
                 <div id="counter">
-                    <div class="block"><p id="countdownday"></p></div>
-                    <div class="block"><p id="countdownhr"></p></div>
-                    <div class="block"><p id="countdownmin"></p></div>
-                    <div class="block"><p id="countdowns"></p></div>
+                    <table border = "0" id="cdtable">
+                        <tr>
+                            <td id="countdownday" style="text-align:right;"></td>
+                            <td id="daytext" style="text-align:left;">&nbspDAY</td>
+                        </tr>
+                        <tr>
+                            <td id="countdownhr" style="text-align:right;"></td>
+                            <td id="hrtext" style="text-align:left;">&nbspHR</td>
+                        </tr>
+                        <tr>
+                            <td id="countdownmin" style="text-align:right;"></td>
+                            <td id="mintext" style="text-align:left;">&nbspMIN</td>
+                        </tr>
+                        <tr>
+                            <td id="countdowns" style="text-align:right;"></td>
+                            <td id="stext" style="text-align:left;">&nbspS</td>
+                        </tr>
+                    </table>
+
                 </div>
             </div>
         </div>
@@ -196,6 +211,7 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
 </script>
 </body>
 </html>

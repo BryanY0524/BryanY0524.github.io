@@ -51,7 +51,7 @@
                          style="width:30px;height:30px"></a>
             </li>
             <li class="nav-item nav-icon">
-                <a href="./index_ch.html">
+                <a href="./rsvp_ch.html">
                     <img alt="language"
                          src="./images/language.png"
                          style="width:30px;height:30px"></a>
@@ -80,7 +80,7 @@
                     <option value="10">10</option>
                 </select>
                 <div class="text-center">
-                    <table class="table table-striped"  style="font-family: 'NotoSans', cursive;">
+                    <table class="table table-striped" id="rsvptable" style="font-family: 'NotoSans', cursive;">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -94,8 +94,8 @@
                             <th scope="row">1</th>
                             <td><input class="form-control input-lg" type="text" id="guest1n"
                                        placeholder="Name of Guest 1"></td>
-                            <td><input type="checkbox" id="guest1c"></td>
-                            <td><input type="checkbox" id="guest1b"></td>
+                            <td><input type="checkbox" id="guest1c" class="rsvpcb"></td>
+                            <td><input type="checkbox" id="guest1b" class="rsvpcb"></td>
                         </tr>
                         <tr id="guest2" hidden="true">
                             <th scope="row">2</th>
@@ -173,7 +173,7 @@
     </div>
 </div>
 <footer class="footer font-small rsvp-footer">
-    <div class="text-center text-light py-1">© 2019 Copyright : kyle&tiffany
+    <div class="text-center text-light py-1">© 2019 Copyright : Tiffany&Kyle
     </div>
 </footer>
 
