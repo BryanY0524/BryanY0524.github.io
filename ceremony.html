@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Tiffany & Kyle" />
+    <meta property="og:url" content="http://singyingtgt.com"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://singyingtgt.com/images/bg2.jpg" />
+    <meta property="og:description" content="Join us at our wedding on November 23, 2019 in Hong Kong!" />
+    <title>Tiffany & Kyle - Ceremony Pamphlet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/indexpage.css">
+    <link rel="stylesheet" type="text/css" href="css/timeline.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <link rel="stylesheet" type="text/css" href="css/test.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mystery+Quest&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-center navbar-expand-lg text-center" id="topnav">
+    <a class="navbar-brand" href=./index.html id="brand">Tiffany & Kyle</a>
+    <div id="navcd-inline">
+
+    </div>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<nav class="navbar navbar-center navbar-expand-lg border-bottom border-white text-center" id="topnavcd">
+    <div id="navcd">
+
+    </div>
+</nav>
+<img src="./images/top.png" onclick="topFunction()" id="topbtn"/>
+<div class="d-flex justify-content-center align-items-center">
+        <iframe id="pdf_iframe" src="https://docs.google.com/viewerng/viewer?url=https://singyingtgt.com/images/pamphlet.pdf&embedded=true"></iframe>
+</div>
+
+<footer class="footer font-small">
+    <div class="text-center text-light py-1">© 2019 Copyright : Tiffany&Kyle
+    </div>
+</footer>
+<script src="js/timeline.js"></script>
+<script src="js/countdown.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            document.getElementById("topbtn").style.display = "block";
+        } else {
+            document.getElementById("topbtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    function rsvp_end() {
+        alert("The online R.S.V.P is closed, please contact us through Whatsapp instead, thank you for joining us.");
+    }
+</script>
+</body>
+</html>

@@ -20,6 +20,11 @@ tr{
     vertical-align: middle;
 }
 
+#pdf_iframe{
+    margin-top: 70px;
+    height: 85vh;
+    width: 90%;
+}
 #brand{
     font-family: 'BaskervilleOldFacSCD', cursive;
     font-weight: 400;
@@ -42,7 +47,7 @@ tr{
 }
 
 .navbar-brand{
-    font-size: 2.2em;
+    font-size: 2.0em;
 }
 
 .title{
@@ -86,15 +91,48 @@ h3 {
 padding: 5px;
 }
 
+#navcd-inline{
+    display: block;
+    position: absolute;
+    left: 32%;
+    font-family: 'Courgette', cursive;
+    font-weight: 400;
+    color: white;
+}
+
+#topnavcd{
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    visibility: hidden;
+    font-family: 'Courgette', cursive;
+    font-weight: 400;
+    color: white;
+}
+
 #topnav{
-    border-bottom-color: white;
+    border-bottom: 1px solid white;
     overflow: hidden;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     background: rgb(129, 216, 208);
+    z-index:2; /*Add this*/
+    padding:0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#topnavcd{
+    border-bottom-color: white;
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 57px; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    background: rgb(129, 216, 208);
     z-index:1; /*Add this*/
 }
+
 .navbar{
     padding-bottom: 5px;
 }
@@ -151,7 +189,7 @@ padding: 5px;
     font-size: 18px;
     text-transform: uppercase;
     background: rgb(129, 216, 208);
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 8px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
@@ -162,6 +200,59 @@ padding: 5px;
     color: rgb(129, 216, 208);
     background: white;
     border: 2px solid rgb(129, 216, 208);
+}
+
+#rsvptable{
+    font-size: 14px;
+}
+
+.tltime{
+    font-size: 20px;
+}
+
+.tlwords{
+    text-align: left;
+}
+
+.tlmap, .tlmap:hover{
+    color: #0ab9b5;
+}
+
+.sbtn{
+    font-weight: 600;
+    color:#fff;
+    letter-spacing: 2px;
+    padding: 5px 2px;
+    margin: 0 8px;
+    font-size: 8px;
+    text-transform: uppercase;
+    background: rgb(129, 216, 208);
+    border: 1px solid white;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    display: inline-block;
+}
+
+
+tr td{
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+
+}
+
+.sbtn:hover{
+    color: rgb(129, 216, 208);
+    background: white;
+    border: 1px solid rgb(129, 216, 208);
+}
+
+#ccol{
+    width:110px;
+}
+
+#bcol{
+    width:110px;
 }
 
 .cus-sub {
@@ -197,6 +288,12 @@ padding: 5px;
     border: 2px solid rgb(129, 216, 208);
 }
 
+td, th{
+    text-align: center;
+    vertical-align: center;
+    justify-content: center;
+}
+
 input[type=checkbox]
 {
     /* Double-sized Checkboxes */
@@ -206,8 +303,10 @@ input[type=checkbox]
     -o-transform: scale(2); /* Opera */
     transform: scale(2);
     margin: 0 auto;
-    padding: 10px;
+    padding: 5px;
 }
+
+
 
 .disable-select {
     user-select: none; /* supported by Chrome and Opera */
@@ -217,17 +316,25 @@ input[type=checkbox]
     -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
-td, th{
-    text-align: center;
-    vertical-align: center;
-    justify-content: center;
-}
+
 
 /* NAV CSS */
 
 .banner{
     width: 100%;
-    height: 25vh;
+    height: 20vw;
+    background-color: #c8fbfa;
+}
+
+#bannerword{
+    position: relative;
+    top: 35%;
+    font-family: 'Courgette', cursive;
+    font-size: 3vw;
+}
+
+#tlbg{
+    background-color: #99ece9;
 }
 
 #about{
@@ -255,6 +362,7 @@ td, th{
     justify-content: center;
     text-align: center;
 }
+
 
 #cdtable{
     width: 100%;
@@ -422,6 +530,15 @@ footer{
     }
 }
 @media(max-width:991px) {
+    #topnav{
+        border-bottom: none;
+    }
+    #navcd-inline{
+        display: none;
+    }
+    #topnavcd{
+        visibility: visible;
+    }
     .title {
         font-size: 6vw;
     }
@@ -441,6 +558,16 @@ footer{
     }
 }
 @media(max-width: 768px){
+    #rsvptable{
+        font-size: 12px;
+    }
+    #ccol{
+        width:90px;
+    }
+
+    #bcol{
+        width:90px;
+    }
     #home {
         min-height: 450px;
     }

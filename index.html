@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Tiffany & Kyle" />
+    <meta property="og:url" content="http://singyingtgt.com"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://singyingtgt.com/images/bg2.jpg" />
+    <meta property="og:description" content="Join us at our wedding on November 23, 2019 in Hong Kong!" />
     <title>Tiffany & Kyle</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/indexpage.css">
@@ -17,10 +22,15 @@
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Mystery+Quest&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lemonada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+
 </head>
 <body>
-<nav class="navbar navbar-expand-lg border-bottom border-white" id="topnav">
+<nav class="navbar navbar-center navbar-expand-lg text-center" id="topnav">
     <a class="navbar-brand" href=./index.html id="brand">Tiffany & Kyle</a>
+    <div id="navcd-inline">
+
+    </div>
     <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
             data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -33,7 +43,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="#photos">Gallery</a>
             </li>
-            <a class="nav-link rsvpbtn" href="./rsvp_en.html">&nbspRSVP&nbsp</a>
+            <a class="nav-link rsvpbtn" href="https://api.whatsapp.com/send?phone=85252264460" onclick="rsvp_end()">&nbspRSVP&nbsp</a>
             <li class="nav-item nav-icon">
                 <a href="https://api.whatsapp.com/send?phone=85252264460">
                     <img alt="whatsapp"
@@ -48,19 +58,23 @@
             </li>
         </ul>
     </div>
+</nav>
+<nav class="navbar navbar-center navbar-expand-lg border-bottom border-white text-center" id="topnavcd">
+    <div id="navcd">
 
+    </div>
 </nav>
 <img src="./images/top.png" onclick="topFunction()" id="topbtn"/>
 <div id="home" class="d-flex justify-content-center align-items-center">
     <div class="text-center align-items-center justify-content-center animated fadeInDown maintext">
         <h3 class="disable-select maindate">November 23, 2019 • HONG KONG</h3>
-        <a class="nav-link rsvpbtn" href="./rsvp_en.html" style="font-size:1.5rem">&nbspRSVP&nbsp</a>
+        <a class="nav-link rsvpbtn" href="https://api.whatsapp.com/send?phone=85252264460" onclick="rsvp_end()" style="font-size:1.5rem">&nbspRSVP&nbsp</a>
     </div>
 </div>
-<div class="container banner">
-    WORDS
+<div class="banner text-center justify-content-center">
+    <p id="bannerword">We request the honour of your presence at our wedding.</p>
 </div>
-<div>
+<div id="tlbg">
     <div class="row text-center justify-content-center" id="events">
         <div class="col-lg-8 d-flex left2 text-center" id="topl">
             <div class="container">
@@ -72,14 +86,16 @@
                         </div>
                         <div class="timeline-content">
                             <h2>Ceremony</h2>
-                            <p>
+                            <p class="tltime">
                                 4:00PM
                             </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.
+                            <p class="tlwords">
+                                Our wedding ceremony will take place at <a href="https://goo.gl/maps/7ipzErwgf6UJggzq6"
+                                                                           class="tlmap">St. John's Cathedral</a>. We
+                                invite you to share
+                                with us a celebration of love in front of God.
+
                             </p>
-                            <a href="https://goo.gl/maps/7ipzErwgf6UJggzq6" class="btn"><img src="images/location.png" class="map_icon" alt="maplink"></a>
                         </div>
                     </div>
 
@@ -88,16 +104,16 @@
                             <img src="images/celebrate.png" class="inline_icon" alt="celebrate">
                         </div>
                         <div class="timeline-content right">
-                            <h2>Cocktail</h2>
-                            <p>
+                            <h2>Reception</h2>
+                            <p class="tltime">
                                 6:00PM
                             </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo.
-                                Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur
-                                accusantium maxime molestiae sunt ipsa.
+                            <p class="tlwords">
+                                Join us at the <a href="https://goo.gl/maps/wYtgx9HiguaYeS9R9"
+                                                          class="tlmap">Kowloon Shangri-La Hotel</a> for cocktails, photos and games. Snacks and
+                                drinks will be provided.
+
                             </p>
-                            <a href="https://goo.gl/maps/wYtgx9HiguaYeS9R9" class="btn"><img src="images/location.png" class="map_icon" alt="maplink"></a>
                         </div>
                     </div>
 
@@ -106,16 +122,13 @@
                             <img src="images/photo.png" class="inline_icon" alt="photo">
                         </div>
                         <div class="timeline-content">
-                            <h2>Photo</h2>
-                            <p>
-                                6:00PM
+                            <h2>Photo Session</h2>
+                            <p class="tltime">
+                                6:30PM
                             </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo.
-                                Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur
-                                accusantium maxime molestiae sunt ipsa.</a>
+                            <p class="tlwords">
+                                If you have not taken any photos with the newly married couple. Here is the time.
                             </p>
-                            <a href="https://goo.gl/maps/wYtgx9HiguaYeS9R9" class="btn"><img src="images/location.png" class="map_icon" alt="maplink"></a>
                         </div>
                     </div>
 
@@ -124,44 +137,17 @@
                             <img src="images/dinner.png" class="inline_icon" alt="dinner" style="padding-top: 12px">
                         </div>
                         <div class="timeline-content right">
-                            <h2>Dinner</h2>
-                            <p>
-                                6:00PM
+                            <h2>Banquet</h2>
+                            <p class="tltime">
+                                8:00PM
                             </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo.
-                                Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur
-                                accusantium maxime molestiae sunt ipsa.
+                            <p class="tlwords">
+                                Enjoy the 6 courses dinner at the Grand Ballroom and celebrate the beginning our next
+                                stage of life with us.
+
                             </p>
-                            <a href="https://goo.gl/maps/wYtgx9HiguaYeS9R9" class="btn"><img src="images/location.png" class="map_icon" alt="maplink"></a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 d-flex right2 text-center" id="topr">
-            <div class="container animated fadeIn" id="countdownmain" data-aos="fade-up">
-                <h3 class="title" style="font-family: 'NotoSans', cursive;">The Wedding Day</h3>
-                <div id="counter">
-                    <table border = "0" id="cdtable">
-                        <tr>
-                            <td id="countdownday" style="text-align:right;"></td>
-                            <td id="daytext" style="text-align:left;">&nbspDAY</td>
-                        </tr>
-                        <tr>
-                            <td id="countdownhr" style="text-align:right;"></td>
-                            <td id="hrtext" style="text-align:left;">&nbspHR</td>
-                        </tr>
-                        <tr>
-                            <td id="countdownmin" style="text-align:right;"></td>
-                            <td id="mintext" style="text-align:left;">&nbspMIN</td>
-                        </tr>
-                        <tr>
-                            <td id="countdowns" style="text-align:right;"></td>
-                            <td id="stext" style="text-align:left;">&nbspS</td>
-                        </tr>
-                    </table>
-
                 </div>
             </div>
         </div>
@@ -181,7 +167,7 @@
         <img src="images/img_v3.jpg" alt="">
         <img src="images/img_h7.jpg" alt="">
         <img src="images/img_v4.jpg" alt="">
-        <img src="images/img_h7.jpg" alt="">
+        <img src="images/img_h8.jpg" alt="">
 
     </section>
 </div>
@@ -214,7 +200,9 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
-
+    function rsvp_end() {
+        alert("The online R.S.V.P is closed, please contact us through Whatsapp instead, thank you for joining us.");
+    }
 </script>
 </body>
 </html>

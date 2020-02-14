@@ -31,8 +31,8 @@
         firebase.initializeApp(firebaseConfig);
     </script>
 </head>
-<body>
-<nav class="navbar navbar-expand-md border-bottom border-white" id="topnav">
+<body onload="rsvp_end()">
+<nav class="navbar navbar-expand-lg border-bottom border-white" id="topnav">
 
     <a class="navbar-brand" href=./index.html id="brand">Tiffany & Kyle</a>
     <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
@@ -84,9 +84,9 @@
                         <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Name of Guest (English/Chinese)</th>
-                            <th scope="col">Ceremony</th>
-                            <th scope="col">Banquet</th>
+                            <th scope="col">Name (English/Chinese)</th>
+                            <th id='ccol' scope="col">Ceremony</th>
+                            <th id='bcol' scope="col">Banquet</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -159,6 +159,12 @@
                                        placeholder="Name of Guest 10"></td>
                             <td><input type="checkbox" id="guest10c"></td>
                             <td><input type="checkbox" id="guest10b"></td>
+                        </tr>
+                        <tr id="buttons" hidden="true">
+                            <th scope="row"></th>
+                            <td></td>
+                            <td><input type="button" class="btn sbtn" value="Select All" onclick="selectc()" id="sc"><input type="button" class="btn sbtn" value="Unselect" onclick="unselectc()" id='usc' hidden="true"></td>
+                            <td><input type="button" class="btn sbtn" value="Select All" onclick="selectb()" id="sb"><input type="button" class="btn sbtn" value="Unselect" onclick="unselectb()" id='usb' hidden="true"></td>
                         </tr>
                         </tbody>
                     </table>
@@ -265,7 +271,69 @@
         }
     }
 
+    function selectc(){
+        document.getElementById("guest1c").checked = true;
+        document.getElementById("guest2c").checked = true;
+        document.getElementById("guest3c").checked = true;
+        document.getElementById("guest4c").checked = true;
+        document.getElementById("guest5c").checked = true;
+        document.getElementById("guest6c").checked = true;
+        document.getElementById("guest7c").checked = true;
+        document.getElementById("guest8c").checked = true;
+        document.getElementById("guest9c").checked = true;
+        document.getElementById("guest10c").checked = true;
+        document.getElementById("sc").hidden = true;
+        document.getElementById("usc").hidden = false;
+    }
 
+    function selectb(){
+        document.getElementById("guest1b").checked = true;
+        document.getElementById("guest2b").checked = true;
+        document.getElementById("guest3b").checked = true;
+        document.getElementById("guest4b").checked = true;
+        document.getElementById("guest5b").checked = true;
+        document.getElementById("guest6b").checked = true;
+        document.getElementById("guest7b").checked = true;
+        document.getElementById("guest8b").checked = true;
+        document.getElementById("guest9b").checked = true;
+        document.getElementById("guest10b").checked = true;
+        document.getElementById("sb").hidden = true;
+        document.getElementById("usb").hidden = false;
+    }
+
+    function unselectc(){
+        document.getElementById("guest1c").checked = false;
+        document.getElementById("guest2c").checked = false;
+        document.getElementById("guest3c").checked = false;
+        document.getElementById("guest4c").checked = false;
+        document.getElementById("guest5c").checked = false;
+        document.getElementById("guest6c").checked = false;
+        document.getElementById("guest7c").checked = false;
+        document.getElementById("guest8c").checked = false;
+        document.getElementById("guest9c").checked = false;
+        document.getElementById("guest10c").checked = false;
+        document.getElementById("sc").hidden = false;
+        document.getElementById("usc").hidden = true;
+    }
+
+    function unselectb(){
+        document.getElementById("guest1b").checked = false;
+        document.getElementById("guest2b").checked = false;
+        document.getElementById("guest3b").checked = false;
+        document.getElementById("guest4b").checked = false;
+        document.getElementById("guest5b").checked = false;
+        document.getElementById("guest6b").checked = false;
+        document.getElementById("guest7b").checked = false;
+        document.getElementById("guest8b").checked = false;
+        document.getElementById("guest9b").checked = false;
+        document.getElementById("guest10b").checked = false;
+        document.getElementById("sb").hidden = false;
+        document.getElementById("usb").hidden = true;
+    }
+    function rsvp_end(){
+        alert("The online R.S.V.P is closed, please contact us through Whatsapp instead, thank you for joining us.");
+        window.location.replace("./index.html");
+    }
 </script>
 </body>
 

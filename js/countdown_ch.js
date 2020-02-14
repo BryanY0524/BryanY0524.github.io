@@ -37,18 +37,18 @@ var x = setInterval(function() {
     ss = seconds.toString();
 
 
-    document.getElementById("navcd").innerHTML = +sday +'Days Till The Big Day';
-    document.getElementById("navcd-inline").innerHTML = "The Big Day is In: " + "<br>" + sday + 'Day ' + shours + "Hr " + smin + "Min " + ss + "S";
+    document.getElementById("navcd").innerHTML = '婚禮在 '+sday +'日後';
+    document.getElementById("navcd-inline").innerHTML = "距離婚禮還有: " + "<br>" + sday + '日 ' + shours + "時 " + smin + "分 " + ss + "秒";
 
     // If the count down is over, write some text
     if ((distance < 0) && (-(1000*60*60*24)< distance)){
         clearInterval(x);
-        document.getElementById("navcd").innerHTML = "The Big Day is today!";
-        document.getElementById("navcd-inline").innerHTML = "The Big Day is today!";
+        document.getElementById("navcd").innerHTML = "婚禮就在今天！";
+        document.getElementById("navcd-inline").innerHTML = "婚禮就在今天！";
     }
     else if (distance < -(1000*60*60*24)){
         clearInterval(x);
-        document.getElementById("navcd").innerHTML = "<p>The Wedding day has passed.</p>" + "<p>Thank You for Joining us.</p>";
-        document.getElementById("navcd-inline").innerHTML = "<p>The Wedding day has passed.</p>" + "<p>Thank You for Joining us.</p>";
+        document.getElementById("navcd").innerHTML = "<p>婚禮已經完滿結束</p>" + "<p>多謝各位來臨。</p>";
+        document.getElementById("navcd-inline").innerHTML = "<p>婚禮已經完滿結束</p>" + "<p>多謝各位來臨。</p>";
     }
 }, 1000);
