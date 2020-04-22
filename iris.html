@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iris</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="d-flex justify-content-center align-items-center">
+    <div class="text-center align-items-center justify-content-center animated fadeInDown maintext">
+        <div class="form-group">
+            <label for="iris">Name:</label>
+            <input id="iris" type="text" class="form-control">
+        </div>
+        <button class="btn btn-primary" onclick="iris()">Submit</button>
+    </div>
+</div>
+</body>
+<script>
+    function iris(){
+        var user_name = document.getElementById('iris').value;
+        if (user_name.toLowerCase() != "iris"){
+            alert("bye bye :)")
+        }else{
+            alert("妳好　我的小公主");
+            var s = love();
+            while (s === false){
+                s = love();
+            }
+            alert("我也愛妳唷<3")
+        }
+        document.getElementById('iris').value = '';
+    }
+
+    function love(){
+        return confirm('妳愛我嗎？');
+    }
+</script>
+</html>
