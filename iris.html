@@ -19,8 +19,8 @@
 </body>
 <script>
     function iris(){
-        var user_name = document.getElementById('iris').value;
-        if (user_name.toLowerCase() != "iris"){
+        var user_name = document.getElementById('iris').value.toLowerCase();
+        if (!user_name.includes("iris")){
             alert("bye bye :)")
         }else{
             alert("妳好　我的小公主");
